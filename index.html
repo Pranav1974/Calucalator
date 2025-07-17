@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="outline_calculate_white_36dp.png" type="image/icon type">
+    <title>Calculator</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function insertOpenBracket() {
+        const display = document.forms[0].elements['display'];
+        const lastChar = display.value.slice(-1);
+        if (/\d|\)/.test(lastChar)) {
+            display.value += '*(';
+        } else {
+            display.value += '(';
+        }
+    }
+
+    function insertCloseBracket() {
+        const display = document.forms[0].elements['display'];
+        display.value += ')';
+    }
+</script>
+
+
+    
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+            <div class="display">
+                <input type="text" name="display">
+            </div>
+            <div>
+                <input type="button" value="AC" onclick="display.value='' ">
+                <input type="button" value="DE" onclick="display.value=display.value.toString().slice(0,-1)">
+                <input type="button" value="." onclick="display.value+='.'">
+                <input type="button" value="/" onclick="display.value+='/'">
+            </div>
+            <div>
+                <input type="button" value="7" onclick="display.value+='7'">
+                <input type="button" value="8" onclick="display.value+='8'">
+                <input type="button" value="9" onclick="display.value+='9'">
+                <input type="button" value="*" onclick="display.value+='*'">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="display.value+='4'">
+                <input type="button" value="5" onclick="display.value+='5'">
+                <input type="button" value="6" onclick="display.value+='6'">
+                <input type="button" value="+" onclick="display.value+='+'">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="display.value+='1'">
+                <input type="button" value="2" onclick="display.value+='2'">
+                <input type="button" value="3" onclick="display.value+='3'">
+                <input type="button" value="-" onclick="display.value+='-'">
+            </div>
+            <div>
+                <input type="button" value="(" onclick="insertOpenBracket()">
+<input type="button" value=")" onclick="insertCloseBracket()">
+
+
+                <input type="button" value="0"  onclick="display.value+='0'">
+                <input type="button" value="=" onclick="display.value = eval(display.value)">
+
+            </div>
+            </form>
+        </div>
+    </div>
+  
+    <p class="footer-text">DESIGN BY MYLAVARAM PRANAV</p>
+
+
+      
+
+</body>
+  

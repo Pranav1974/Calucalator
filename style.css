@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #95aa63; /* Leaf green */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background-color: #6F9580;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: -6px -6px 10px rgba(81, 40, 31, 0.2), 
+                 6px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 40px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background: #f8f8f8;
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.calculator form input {
+    border: none;
+    outline: none;
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 6px;
+    background: #ddd;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease-in-out;
+}
+
+/* Button hover effect */
+.calculator form input:hover {
+    background: #bbb;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Special buttons */
+.calculator form input[value="AC"],
+.calculator form input[value="DE"] {
+    background: #ff6b6b;
+    color: white;
+}
+
+.calculator form input[value="AC"]:hover,
+.calculator form input[value="DE"]:hover {
+    background: #ff4c4c;
+}
+
+/* Operator buttons */
+.calculator form input[value="+"],
+.calculator form input[value="-"],
+.calculator form input[value="*"],
+.calculator form input[value="/"],
+.calculator form input[value="="] {
+    background: #ffbd69;
+    color: white;
+}
+
+.calculator form input[value="+"]:hover,
+.calculator form input[value="-"]:hover,
+.calculator form input[value="*"]:hover,
+.calculator form input[value="/"]:hover,
+.calculator form input[value="="]:hover {
+    background: #ff9f45;
+}
+.calculator-img {
+    width: 80px; 
+    height: auto;
+    margin-bottom: 15px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-text {
+    background-color: #95aa63;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 25px;
+    color: #333;
+    font-family: 'Pacifico', cursive;
+}
